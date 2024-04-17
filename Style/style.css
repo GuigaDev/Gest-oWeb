@@ -14,7 +14,7 @@
 body{
     display: flex;
     min-height: 100vh;
-    background-color: #e3e9f7;
+    background-color: #ffffffe3;
 }
 
 main{
@@ -27,7 +27,7 @@ main{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background-color: #ffff;
+    background-color: #ffffff8c;
     height: 110vh;
     border-radius: 0px 18px 18px 0px;
     position: relative;
@@ -163,3 +163,4 @@ main{
     justify-content: flex-start;
     gap: 14px;
 }
+
