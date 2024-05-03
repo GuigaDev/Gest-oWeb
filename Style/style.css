@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200; 1.300;1.400;1.500;1.600;1.700;1.800;1.900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1.300;1.400;1.500;1.600;1.700;1.800;1.900&display=swap');
 
 * {
     margin: 0;
@@ -7,23 +6,21 @@
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
 }
-#logotipo{
-    height: 500px;
-    width: 500px;
-}
-body{
+
+body {
     display: flex;
     min-height: 100vh;
     background-color: #ffffffe3;
 }
 
-main{
+main {
     padding: 20px;
     position: fixed;
     z-index: 1;
-    padding-left: calc(82px + 20px) ;
+    padding-left: calc(82px + 20px);
 }
-#sidebar{
+
+#sidebar {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -35,63 +32,69 @@ main{
     min-width: 82px;
     z-index: 2;
 }
-#sidebar_content{
+
+#sidebar_content {
     padding: 12px;
 }
 
-#user{
+#user {
     display: flex;
     align-items: center;
     gap: 8px;
     margin-bottom: 24px;
 }
 
-#user_avatar{
+#user_avatar {
     width: 50px;
     height: 50px;
-    object-fit: over;
+    object-fit: cover;
     border-radius: 20px;
 }
 
-#user_infos{
+#user_infos {
     display: flex;
     flex-direction: column;
 }
 
-#user_infos span :last-child{
+#user_infos span:last-child {
     color: #6b6b6b;
     font-size: 12px;
-
 }
 
-#side_items{
+#side_items {
     display: flex;
     flex-direction: column;
     gap: 8px;
     list-style: none;
 }
-.side-item{
+
+.side-item {
     border-radius: 8px;
     padding: 14px;
-    cursor:pointer;
+    cursor: pointer;
 }
-.side-item.active{
+
+.side-item.active {
     background-color: #4f46e5;
 }
+
 .side-item:hover:not(.active),
-#logout_btn:hover{
+#logout_btn:hover {
     background-color: #e3e9f7;
 }
-.side-item a{
+
+.side-item a {
     text-decoration: none;
     display: flex;
     align-items: center;
     justify-content: center;
-    color:black;
+    color: black;
 }
+
 .side-item.active a {
-    color:#e3e9f7;
+    color: #e3e9f7;
 }
+
 .side-item a i {
     display: flex;
     align-items: center;
@@ -100,12 +103,12 @@ main{
     height: 20px;
 }
 
-#logout{
+#logout {
     border-top: 1px solid #e3e9f7;
     padding: 12px;
 }
 
-#logout_btn{
+#logout_btn {
     border: none;
     padding: 12px;
     font-size: 14px;
@@ -116,10 +119,9 @@ main{
     text-align: start;
     cursor: pointer;
     background-color: transparent;
-
 }
 
-#open_btn{
+#open_btn {
     position: absolute;
     top: 30px;
     right: -10px;
@@ -132,15 +134,15 @@ main{
     cursor: pointer;
 }
 
-#open_btn_icon{
-    transition: trasnform .3s ease;
+#open_btn_icon {
+    transition: transform .3s ease;
 }
 
-.open-sidebar #open_btn_icon{
+.open-sidebar #open_btn_icon {
     transform: rotate(180deg);
 }
 
-.item-description{
+.item-description {
     width: 0px;
     overflow: hidden;
     white-space: nowrap;
@@ -150,17 +152,82 @@ main{
     height: 0px;
 }
 
-#sidebar.open-sidebar{
+#sidebar.open-sidebar {
     min-width: 15%;
 }
 
-#sidebar.open-sidebar .item-description{
+#sidebar.open-sidebar .item-description {
     width: 150px;
     height: auto;
 }
 
-#sidebar.open-sidebar .side-item a{
+#sidebar.open-sidebar .side-item a {
     justify-content: flex-start;
     gap: 14px;
 }
 
+.side-item a .dropdown {
+    position: absolute;
+    right: 0;
+    margin: 20px;
+    transition: .3s ease;
+}
+
+.side-item:hover .submenu {
+    display: block;
+}
+
+.submenu {
+    background: #ffffff85;
+    display: none;
+    position: absolute;
+    left: 100%;
+    top: 0;
+    width: auto;
+    border-radius: 0 8px 8px 0;
+    min-height: 100%;
+    border: 1px solid #ffffff; /* Adiciona borda branca */
+    border-left: none; /* Remove a borda à esquerda */
+}
+
+
+.side-item.dropdown.active .submenu { /* Modificado */
+    display: block;
+}
+
+
+
+.sub-item {
+    padding: 10px 20px; /* Ajuste conforme necessário */
+    cursor: pointer;
+    color: #ffffff; /* Cor do texto */
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.sub-item:hover {
+    background-color: #b6a858; /* Cor de fundo ao passar o mouse */
+}
+
+.sub-item i {
+    margin-right: 10px; /* Espaçamento entre o ícone e o texto */
+}
+/*
+.side-item {
+    position: relative; 
+}
+
+.submenu {
+    background: #4f46e5;
+    display: none;
+    position: absolute;
+    left: 100%;
+    top: 0;
+    width: auto;
+    border-radius: 0 8px 8px 0;
+    min-height: 100%;
+    padding: 12px;
+}
+/*

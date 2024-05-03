@@ -18,12 +18,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $login = $_POST['login'];
             $senha = $_POST['senha'];
 
-            $login_valido = 'usuario';
-            $senha_valida = 'senha123';
+            $login_valido = 'admin';
+            $senha_valida = 'admin';
 
             if ($login === $login_valido && $senha === $senha_valida) {
                 $_SESSION['login'] = true;
-                header('Location: home.php');
+                header('Location: index.html');
                 exit();
             } else {
                 $erro = 'Credenciais inválidas. Tente novamente.';
@@ -41,14 +41,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     } else {
         include('home.php');
     }
-    if (!isset($_SESSION['login'])) {
-        if (isset($_POST['acao'])) {
-            echo 'Formulário enviado';
-        }
-        include('login.php');
-    } else {
-        include('home.php');
-    }
+
 ?>
 
 </body>

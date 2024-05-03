@@ -8,40 +8,34 @@
     <link rel="stylesheet" href="Style/style.css">
 </head>
 <body>
-
-   
     <nav id="sidebar">
         <div id="sidebar_content">
             <div id="user">
                 <img src="imagens/LogoAvatar.jpg" id="user_avatar" alt="Avatar">
                 <p id="user_infos">
-            <span class="item-description">
-                Admin
-            </span>
-            <span class="item-description">
-                Administrador
-            </span>
+                    <span class="item-description">Admin</span>
+                    <span class="item-description">Administrador</span>
                 </p>
-
             </div>
-
             <ul id="side_items">
-            <li class="side-item active">
-                <a href="#">
-                   <i class="fa fa-home" aria-hidden="true"></i>
-                   <span class="item-description">
-                    Home
-                   </span>
-
-                </a>
-            </li>
-            <li class="side-item">
-                <a href="#">
-                    <i class="fa fa-th-list" aria-hidden="true"></i>
-                   <span class="item-description">
-                    Cadastros
-                   </span>
-                </a>
+                <li class="side-item active">
+                    <a href="#">
+                        <i class="fa fa-home" aria-hidden="true"></i>
+                        <span class="item-description">Home</span>
+                    </a>
+                </li>
+                <li class="side-item dropdown">
+                    <a href="#">
+                        <i class="fa fa-th-list" aria-hidden="true"></i>
+                        <span class="item-description">Cadastros</span>
+                    </a>
+                    <div class="submenu">
+                        <a class="sub-item" href="#">Clientes</a>
+                        <a class="sub-item" href="#">Fornecedores</a>
+                        <a class="sub-item" href="#">Produtos</a>
+                        <a class="sub-item" href="#">Vendedores</a>
+                        <a class="sub-item" href="#">Usuários/Permissões</a>
+                    </div>
             </li>
             <li class="side-item">
                 <a href="#">
@@ -50,6 +44,13 @@
                     Movimentação
                    </span>
                 </a>
+                <div class="submenu">
+                    <a class="sub-item" href="#">Ajuste de estoque</a>
+                    <a class="sub-item" href="#">Nota fiscal Eletronica - Entrada</a>
+                    <a class="sub-item" href="#">Nota fiscal Eletronica - Saida</a>
+                    <a class="sub-item" href="#">Troca de produtos</a>
+                </div>
+
             </li>
             <li class="side-item">
                 <a href="#">
